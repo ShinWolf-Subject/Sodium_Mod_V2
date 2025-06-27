@@ -3,15 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
+        targetElement.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
@@ -21,10 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -41,11 +34,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // External link warning
+  // External link warning / tracking
   document.querySelectorAll('a[target="_blank"]').forEach(link => {
     link.addEventListener('click', function(e) {
-      // You could add analytics tracking here if needed
       console.log('External link clicked:', this.href);
     });
   });
+
+  // Toggle titik tiga menu (dropdown)
+  const dots = document.querySelector('.menu-dots');
+  const menu = document.querySelector('#popupMenu');
+  if (dots && menu) {
+    dots.addEventListener('click', function() {
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
+  }
 });
