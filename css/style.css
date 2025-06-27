@@ -254,36 +254,56 @@ footer {
   header, .mod-list, .install-section, .additional-downloads {
     padding: 20px;
   }
-
-.menu-container {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
  }
 
- .menu-dots {
-  font-size: 1.8rem;
-  cursor: pointer;
-  user-select: none;
+ .dropdown-container {
+    position: relative;
+    display: inline-block;
+    float: right; /* Letakkan di kanan */
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-.menu-popup {
-  display: none;
-  background: #2a2a2a;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #00000060;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
+.ellipsis-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 15px;
+    color: #333;
 }
 
-.menu-popup a {
-  display: block;
-  color: #eee;
-  text-decoration: none;
-  padding: 0.3rem 0.5rem;
+.ellipsis-btn:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
 
-.menu-popup a:hover {
-  background: #444;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0; /* Sejajar dengan kanan tombol */
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
 }
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
 }
