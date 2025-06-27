@@ -254,4 +254,36 @@ footer {
   header, .mod-list, .install-section, .additional-downloads {
     padding: 20px;
   }
-  }
+
+.menu-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+ }
+
+ .menu-dots {
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-popup {
+  display: none;
+  background: #2a2a2a;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00000060;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu-popup a {
+  display: block;
+  color: #eee;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+}
+
+.menu-popup a:hover {
+  background: #444;
+}
+}
