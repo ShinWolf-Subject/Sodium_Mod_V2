@@ -50,21 +50,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const ellipsisBtn = document.getElementById('ellipsisBtn');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    
-    // Toggle dropdown ketika tombol diklik
-    ellipsisBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        dropdownMenu.classList.toggle('show');
-    });
-    
-    // Tutup dropdown ketika klik di luar
-    window.addEventListener('click', function() {
-        if (dropdownMenu.classList.contains('show')) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
-});
